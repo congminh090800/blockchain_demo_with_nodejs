@@ -1,0 +1,22 @@
+{
+  "name": "blockchain_demo_with_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congminh090800/blockchain_demo_with_nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congminh090800/blockchain_demo_with_nodejs/issues"
+  },
+  "homepage": "https://github.com/congminh090800/blockchain_demo_with_nodejs#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
