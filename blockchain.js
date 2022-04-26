@@ -3,8 +3,9 @@ const Transaction = require("./transaction");
 class Blockchain {
   constructor() {
     this.chain = [this.createGenesisBlock()];
-    this.difficulty = 4; // number of zeros
+    this.difficulty = 4; // number of zeros, the bigger the harder to solve the consensus
     this.pendingTxs = [];
+    // amount of reward
     this.miningReward = 10;
   }
 

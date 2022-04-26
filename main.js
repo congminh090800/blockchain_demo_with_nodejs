@@ -1,16 +1,19 @@
 const Blockchain = require("./blockchain");
 const Transaction = require("./transaction");
 
-const minerAddr = "minhlpc";
-
+const minerAddr = "minhlpc(miner)";
+const andy = "andy";
+const lisa = "lisa";
 let blockchain = new Blockchain();
-blockchain.createTx(new Transaction("address1", "address2", 100));
-blockchain.createTx(new Transaction("address2", "address1", 10));
+// stimulate 2 transactions
+blockchain.createTx(new Transaction(andy, lisa, 100));
+blockchain.createTx(new Transaction(lisa, andy, 10));
 
 blockchain.minePendingTxsPool(minerAddr);
-
 console.log(`Balance of ${minerAddr}: ${blockchain.getBalance(minerAddr)}`);
 
+// balance of miner will be update until the next block is mined
 blockchain.minePendingTxsPool(minerAddr);
-
+console.log(`Balance of ${andy}: ${blockchain.getBalance(andy)}`);
+console.log(`Balance of ${lisa}: ${blockchain.getBalance(lisa)}`);
 console.log(`Balance of ${minerAddr}: ${blockchain.getBalance(minerAddr)}`);
